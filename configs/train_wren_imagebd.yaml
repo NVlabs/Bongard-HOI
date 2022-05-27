@@ -1,0 +1,81 @@
+train_dataset: image-bongard-bbox
+train_dataset_args:
+  im_dir: ./assets/data/hake/images
+  split_file: ./cache/bongard_hoi_train.json
+  split: train
+  augment: true
+
+val_seen_cat_seen_act_dataset: image-bongard-bbox
+val_seen_cat_seen_act_dataset_args:
+  im_dir: ./assets/data/hake/images
+  split_file: ./cache/bongard_hoi_val_seen_cat_seen_act.json
+  split: val
+
+val_seen_cat_unseen_act_dataset: image-bongard-bbox
+val_seen_cat_unseen_act_dataset_args:
+  im_dir: ./assets/data/hake/images
+  split_file: ./cache/bongard_hoi_val_seen_cat_unseen_act.json
+  split: val
+
+val_unseen_cat_seen_act_dataset: image-bongard-bbox
+val_unseen_cat_seen_act_dataset_args:
+  im_dir: ./assets/data/hake/images
+  split_file: ./cache/bongard_hoi_val_unseen_cat_seen_act.json
+  split: val
+
+val_unseen_cat_unseen_act_dataset: image-bongard-bbox
+val_unseen_cat_unseen_act_dataset_args:
+  im_dir: ./assets/data/hake/images
+  split_file: ./cache/bongard_hoi_val_unseen_cat_unseen_act.json
+  split: val
+
+test_seen_cat_seen_act_dataset: image-bongard-bbox
+test_seen_cat_seen_act_dataset_args:
+  im_dir: ./assets/data/hake/images
+  split_file: ./cache/bongard_hoi_test_seen_cat_seen_act.json
+  split: test
+
+test_seen_cat_unseen_act_dataset: image-bongard-bbox
+test_seen_cat_unseen_act_dataset_args:
+  im_dir: ./assets/data/hake/images
+  split_file: ./cache/bongard_hoi_test_seen_cat_unseen_act.json
+  split: test
+
+test_unseen_cat_seen_act_dataset: image-bongard-bbox
+test_unseen_cat_seen_act_dataset_args:
+  im_dir: ./assets/data/hake/images
+  split_file: ./cache/bongard_hoi_test_unseen_cat_seen_act.json
+  split: test
+
+test_unseen_cat_unseen_act_dataset: image-bongard-bbox
+test_unseen_cat_unseen_act_dataset_args:
+  im_dir: ./assets/data/hake/images
+  split_file: ./cache/bongard_hoi_test_unseen_cat_unseen_act.json
+  split: test
+
+use_gt_bbox: false
+
+model: wren
+model_args:
+    encoder: transparent_superpixel_encoder
+    encoder_args: {encoder: resnet50, use_boxes_dim: False}
+load_encoder: ./cache/resnet50-{}.pth
+encoder_pretrain: imagenet
+
+n_way: 2
+n_shot: 6
+n_query: 1
+train_batches: 100000
+ep_per_batch: 16
+
+max_epoch: 100
+optimizer: sgd
+optimizer_args: {lr: 0.001, weight_decay: 5.e-4, milestones: [50, 80]}
+
+visualize_datasets: false
+ets: true
+
+print_freq: 10
+save_epoch: 1
+eval_epoch: 1
+h: 1
