@@ -81,7 +81,7 @@ Please note that this repo only hosts the code of Bongard-HOI, the Bongard-HOI d
 
 ## Acknowledgement
 
-The code of Bongard-HOI requires images from [HAKE](http://hake-mvig.cn/) and Bongard-HOI annotations. However, both images and annotations are not owned or hosted by NVIDIA. Please contact [Xiaojian Ma](mailto:xiaojian.ma@ucla.edu) if you have any issue with them.
+The code of Bongard-HOI requires images from [HAKE](http://hake-mvig.cn/) and Bongard-HOI annotations. However, both images and annotations are not owned or hosted by NVIDIA. Please contact [Anima Anandkumar](mailto:anima@caltech.edu) if you have any issue with them.
 
 ## Citation
 
