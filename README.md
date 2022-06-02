@@ -8,7 +8,7 @@ This repository hosts the code for the paper:
 
 by [Huaizu Jiang*](https://jianghz.me/), [Xiaojian Ma*](http://web.cs.ucla.edu/~xm), [Weili Nie](https://weilinie.github.io/), [Zhiding Yu](https://chrisding.github.io/), [Yuke Zhu](https://www.cs.utexas.edu/~yukez/) and [Anima Anandkumar](http://tensorlab.cms.caltech.edu/users/anima/)
 
-[🔥Submit your result to PwC!](https://paperswithcode.com/dataset/bongard-hoi) | [arXiv](http://arxiv.org/abs/2205.13803) | [Poster](https://web.cs.ucla.edu/~xm/file/bongardhoi_cvpr22_poster.pdf)
+[🔥Submit your result to PwC!](https://paperswithcode.com/dataset/bongard-hoi) | [arXiv](http://arxiv.org/abs/2205.13803) | [Poster](https://web.cs.ucla.edu/~xm/file/bongardhoi_cvpr22_poster.pdf) | [Slides] (https://web.cs.ucla.edu/~xm/file/bongardhoi_cvpr22_slides.pdf)
 
 ## Abstract
 
