@@ -27,4 +27,4 @@ Data Preparation
 
 3. Download the detected bounding boxes from [here](http://tensorlab.cms.caltech.edu/projects/bongard-hoi/data/hico_faster_rcnn_R_101_DC5_3x_objectness.pkl) and extract them to `./cache`
 
-4. Download the pretrained ResNet-50 from [here](http://tensorlab.cms.caltech.edu/projects/bongard-hoi/data/resnet.tar) and extract them ito `./cache`
+4. Download the pretrained ResNet-50 from [here](http://tensorlab.cms.caltech.edu/projects/bongard-hoi/data/resnet.tar) and extract them to `./cache`
