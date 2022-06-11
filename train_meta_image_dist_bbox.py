@@ -118,6 +118,11 @@ def main_worker(gpu, ngpus_per_node, argss):
         yaml.dump(config, open(os.path.join(save_path, 'config.yaml'), 'w'))
 
         logger = utils.Logger(file_name=os.path.join(save_path, "log_sdout.txt"), file_mode="a+", should_flush=True)
+    else:
+        save_path = None
+        writer = None
+        args.writer = writer
+        logger = None
 
     #### Dataset ####
 
@@ -149,8 +154,6 @@ def main_worker(gpu, ngpus_per_node, argss):
     train_dataset = datasets.make(config['train_dataset'], **dataset_configs)
     if utils.is_main_process():
         utils.log('train dataset: {} samples'.format(len(train_dataset)))
-        if config.get('visualize_datasets'):
-            utils.visualize_dataset(train_dataset, 'train_dataset', writer)
     if args.distributed:
         args.batch_size = int(ep_per_batch / ngpus_per_node)
         args.batch_size_val = int(ep_per_batch / ngpus_per_node)
@@ -198,8 +201,6 @@ def main_worker(gpu, ngpus_per_node, argss):
         val_dataset_i = datasets.make(config['{}_dataset'.format(val_type_i)], **dataset_configs)
         if utils.is_main_process():
             utils.log('{} dataset: {} samples'.format(val_type_i, len(val_dataset_i)))
-            if config.get('visualize_datasets'):
-                utils.visualize_dataset(val_dataset_i, 'val_dataset_i', writer)
 
         if args.distributed:
             val_sampler = torch.utils.data.distributed.DistributedSampler(val_dataset_i)
@@ -574,7 +575,6 @@ if __name__ == '__main__':
     # parser.add_argument('--gpu', default='0')
     parser.add_argument('--seed', type=int, default=123)
     parser.add_argument('--workers', type=int, default=8)
-    parser.add_argument('--auto-resume', action='store_true')
     parser.add_argument('--test_only', action='store_true')
     parser.add_argument('--test_model', default=None)
 
