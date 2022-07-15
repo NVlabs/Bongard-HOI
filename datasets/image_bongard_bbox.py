@@ -39,7 +39,7 @@ class ImageBongard(Dataset):
         split_file_path = kwargs.get('split_file')
         assert split_file_path is not None
         bongard_problems = json.load(open(split_file_path, 'r'))
-        self.bongard_problems = bongard_problems[:100]
+        self.bongard_problems = bongard_problems
         self.im_dir = kwargs.get('im_dir')
         assert self.im_dir is not None
         self.n_tasks = len(bongard_problems)
