@@ -7,63 +7,63 @@ train_dataset_args:
   bbox_file: ./cache/hico_faster_rcnn_R_101_DC5_3x_objectness.pkl
   det_thresh: 0.8
 
-val_seen_cat_seen_act_dataset: image-bongard-bbox
-val_seen_cat_seen_act_dataset_args:
+val_seen_obj_seen_act_dataset: image-bongard-bbox
+val_seen_obj_seen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_val_seen_cat_seen_act.json
+  split_file: ./cache/bongard_hoi_val_seen_obj_seen_act.json
   split: val
   bbox_file: ./cache/hico_faster_rcnn_R_101_DC5_3x_objectness.pkl
   det_thresh: 0.8
 
-val_seen_cat_unseen_act_dataset: image-bongard-bbox
-val_seen_cat_unseen_act_dataset_args:
+val_seen_obj_unseen_act_dataset: image-bongard-bbox
+val_seen_obj_unseen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_val_seen_cat_unseen_act.json
+  split_file: ./cache/bongard_hoi_val_seen_obj_unseen_act.json
   split: val
   bbox_file: ./cache/hico_faster_rcnn_R_101_DC5_3x_objectness.pkl
   det_thresh: 0.8
 
-val_unseen_cat_seen_act_dataset: image-bongard-bbox
-val_unseen_cat_seen_act_dataset_args:
+val_unseen_obj_seen_act_dataset: image-bongard-bbox
+val_unseen_obj_seen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_val_unseen_cat_seen_act.json
+  split_file: ./cache/bongard_hoi_val_unseen_obj_seen_act.json
   split: val
   bbox_file: ./cache/hico_faster_rcnn_R_101_DC5_3x_objectness.pkl
   det_thresh: 0.8
 
-val_unseen_cat_unseen_act_dataset: image-bongard-bbox
-val_unseen_cat_unseen_act_dataset_args:
+val_unseen_obj_unseen_act_dataset: image-bongard-bbox
+val_unseen_obj_unseen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_val_unseen_cat_unseen_act.json
+  split_file: ./cache/bongard_hoi_val_unseen_obj_unseen_act.json
   split: val
   bbox_file: ./cache/hico_faster_rcnn_R_101_DC5_3x_objectness.pkl
   det_thresh: 0.8
 
-test_seen_cat_seen_act_dataset: image-bongard-bbox
-test_seen_cat_seen_act_dataset_args:
+test_seen_obj_seen_act_dataset: image-bongard-bbox
+test_seen_obj_seen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_test_seen_cat_seen_act.json
+  split_file: ./cache/bongard_hoi_test_seen_obj_seen_act.json
   split: test
   bbox_file: ./cache/hico_faster_rcnn_R_101_DC5_3x_objectness.pkl
 
-test_seen_cat_unseen_act_dataset: image-bongard-bbox
-test_seen_cat_unseen_act_dataset_args:
+test_seen_obj_unseen_act_dataset: image-bongard-bbox
+test_seen_obj_unseen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_test_seen_cat_unseen_act.json
+  split_file: ./cache/bongard_hoi_test_seen_obj_unseen_act.json
   split: test
   bbox_file: ./cache/hico_faster_rcnn_R_101_DC5_3x_objectness.pkl
 
-test_unseen_cat_seen_act_dataset: image-bongard-bbox
-test_unseen_cat_seen_act_dataset_args:
+test_unseen_obj_seen_act_dataset: image-bongard-bbox
+test_unseen_obj_seen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_test_unseen_cat_seen_act.json
+  split_file: ./cache/bongard_hoi_test_unseen_obj_seen_act.json
   split: test
   bbox_file: ./cache/hico_faster_rcnn_R_101_DC5_3x_objectness.pkl
 
-test_unseen_cat_unseen_act_dataset: image-bongard-bbox
-test_unseen_cat_unseen_act_dataset_args:
+test_unseen_obj_unseen_act_dataset: image-bongard-bbox
+test_unseen_obj_unseen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_test_unseen_cat_unseen_act.json
+  split_file: ./cache/bongard_hoi_test_unseen_obj_unseen_act.json
   split: test
   bbox_file: ./cache/hico_faster_rcnn_R_101_DC5_3x_objectness.pkl
 

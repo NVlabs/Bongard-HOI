@@ -5,52 +5,52 @@ train_dataset_args:
   split: train
   augment: true
 
-val_seen_cat_seen_act_dataset: image-bongard-bbox
-val_seen_cat_seen_act_dataset_args:
+val_seen_obj_seen_act_dataset: image-bongard-bbox
+val_seen_obj_seen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_val_seen_cat_seen_act.json
+  split_file: ./cache/bongard_hoi_val_seen_obj_seen_act.json
   split: val
 
-val_seen_cat_unseen_act_dataset: image-bongard-bbox
-val_seen_cat_unseen_act_dataset_args:
+val_seen_obj_unseen_act_dataset: image-bongard-bbox
+val_seen_obj_unseen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_val_seen_cat_unseen_act.json
+  split_file: ./cache/bongard_hoi_val_seen_obj_unseen_act.json
   split: val
 
-val_unseen_cat_seen_act_dataset: image-bongard-bbox
-val_unseen_cat_seen_act_dataset_args:
+val_unseen_obj_seen_act_dataset: image-bongard-bbox
+val_unseen_obj_seen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_val_unseen_cat_seen_act.json
+  split_file: ./cache/bongard_hoi_val_unseen_obj_seen_act.json
   split: val
 
-val_unseen_cat_unseen_act_dataset: image-bongard-bbox
-val_unseen_cat_unseen_act_dataset_args:
+val_unseen_obj_unseen_act_dataset: image-bongard-bbox
+val_unseen_obj_unseen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_val_unseen_cat_unseen_act.json
+  split_file: ./cache/bongard_hoi_val_unseen_obj_unseen_act.json
   split: val
 
-test_seen_cat_seen_act_dataset: image-bongard-bbox
-test_seen_cat_seen_act_dataset_args:
+test_seen_obj_seen_act_dataset: image-bongard-bbox
+test_seen_obj_seen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_test_seen_cat_seen_act.json
+  split_file: ./cache/bongard_hoi_test_seen_obj_seen_act.json
   split: test
 
-test_seen_cat_unseen_act_dataset: image-bongard-bbox
-test_seen_cat_unseen_act_dataset_args:
+test_seen_obj_unseen_act_dataset: image-bongard-bbox
+test_seen_obj_unseen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_test_seen_cat_unseen_act.json
+  split_file: ./cache/bongard_hoi_test_seen_obj_unseen_act.json
   split: test
 
-test_unseen_cat_seen_act_dataset: image-bongard-bbox
-test_unseen_cat_seen_act_dataset_args:
+test_unseen_obj_seen_act_dataset: image-bongard-bbox
+test_unseen_obj_seen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_test_unseen_cat_seen_act.json
+  split_file: ./cache/bongard_hoi_test_unseen_obj_seen_act.json
   split: test
 
-test_unseen_cat_unseen_act_dataset: image-bongard-bbox
-test_unseen_cat_unseen_act_dataset_args:
+test_unseen_obj_unseen_act_dataset: image-bongard-bbox
+test_unseen_obj_unseen_act_dataset_args:
   im_dir: ./assets/data/hake/images
-  split_file: ./cache/bongard_hoi_test_unseen_cat_unseen_act.json
+  split_file: ./cache/bongard_hoi_test_unseen_obj_unseen_act.json
   split: test
 
 use_gt_bbox: false
