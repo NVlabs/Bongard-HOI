@@ -174,6 +174,11 @@ class ImageBongard(Dataset):
         # BGR to RGB
         im = im[:, :, ::-1]
         assert im is not None, im_path
+        
+        # fix image and annotation mismatch of openimages
+        if "openimages" in im_path:
+            x1, y1, x2, y2 = int(1.6 * x1), int(1.6 * y1), int(1.6 * x2), int(1.6 * y2)
+        
         crop_im = im[y1:y2, x1:x2]
 
         if self.boxes_data is None:
