@@ -181,17 +181,17 @@ def main_worker(gpu, ngpus_per_node, argss):
     # val & test
     if args.test_only:
         val_type_list = [
-            'test_seen_cat_seen_act',
-            'test_seen_cat_unseen_act',
-            'test_unseen_cat_seen_act',
-            'test_unseen_cat_unseen_act'
+            'test_seen_obj_seen_act',
+            'test_seen_obj_unseen_act',
+            'test_unseen_obj_seen_act',
+            'test_unseen_obj_unseen_act'
         ]
     else:
         val_type_list = [
-            'val_seen_cat_seen_act',
-            'val_seen_cat_unseen_act',
-            'val_unseen_cat_seen_act',
-            'val_unseen_cat_unseen_act'
+            'val_seen_obj_seen_act',
+            'val_seen_obj_unseen_act',
+            'val_unseen_obj_seen_act',
+            'val_unseen_obj_unseen_act'
         ]
 
     val_loader_dict = {}
