@@ -178,8 +178,11 @@ class ImageBongard(Dataset):
         # fix image and annotation mismatch of openimages
         if "openimages" in im_path:
             x1, y1, x2, y2 = int(1.6 * x1), int(1.6 * y1), int(1.6 * x2), int(1.6 * y2)
-        
+            # if bounding box is out of the border, use the whole image
+            if y1 > imh or y2 > imh or x1 > imw or x2 > imw:
+                x1, y1, x2, y2 = int(0), int(0), imw, imh
         crop_im = im[y1:y2, x1:x2]
+        assert crop_im.shape[0]*crop_im.shape[1] != 0, im_path
 
         if self.boxes_data is None:
             # use ground-truth bounding boxes
