@@ -177,18 +177,19 @@ class ImageBongard(Dataset):
 
         # fix image and annotation mismatch of openimages
         if "openimages" in im_path:
-            x1, y1, x2, y2 = int(1.6 * x1), int(1.6 * y1), int(1.6 * x2), int(1.6 * y2)
-            # if bounding box is out of the border, use the whole image
-            if y1 > imh or y2 > imh or x1 > imw or x2 > imw:
-                x1, y1, x2, y2 = int(0), int(0), imw, imh
-            sub_bbox[0] = max(sub_bbox[0] * 1.6, int(0))
-            sub_bbox[1] = max(sub_bbox[1] * 1.6, int(0))
-            sub_bbox[2] = min(sub_bbox[2] * 1.6, imw)
-            sub_bbox[3] = min(sub_bbox[3] * 1.6, imh)
-            obj_bbox[0] = max(obj_bbox[0] * 1.6, int(0))
-            obj_bbox[1] = max(obj_bbox[1] * 1.6, int(0))
-            obj_bbox[2] = min(obj_bbox[2] * 1.6, imw)
-            obj_bbox[3] = min(obj_bbox[3] * 1.6, imh)
+            x1 = min(int(x1 * 1.6), imw)
+            y1 = min(int(y1 * 1.6), imh)
+            x2 = min(int(x2 * 1.6), imw)
+            y2 = min(int(y2 * 1.6), imh)
+
+            sub_bbox[0] = min(sub_bbox[0] * 1.6, x2-x1)
+            sub_bbox[1] = min(sub_bbox[1] * 1.6, y2-y1)
+            sub_bbox[2] = min(sub_bbox[2] * 1.6, x2-x1)
+            sub_bbox[3] = min(sub_bbox[3] * 1.6, y2-y1)
+            obj_bbox[0] = min(obj_bbox[0] * 1.6, x2-x1)
+            obj_bbox[1] = min(obj_bbox[1] * 1.6, y2-y1)
+            obj_bbox[2] = min(obj_bbox[2] * 1.6, x2-x1)
+            obj_bbox[3] = min(obj_bbox[3] * 1.6, y2-y1)
         crop_im = im[y1:y2, x1:x2]
         assert crop_im.shape[0]*crop_im.shape[1] != 0, im_path
 
